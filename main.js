@@ -17,7 +17,7 @@ findAvg();
 var answer2 = document.getElementById("answer2");
 
   var costBetween = items.filter(function(items){return items.price > 14 && items.price < 18;});
-    costBetween.forEach(function(items){answer2.innerHTML += items.title;});
+    costBetween.forEach(function(items){answer2.innerHTML += "<p>" + items.title + "</p>" + "<br></br>";});
 
 
 //3.Which item has a "GBP" currency code? Display it's name and price.
@@ -31,14 +31,14 @@ var findGBP = items.filter(function(items){return items.currency_code === "GBP";
 var answer4 = document.getElementById("answer4")
 
   var woodArray = items.filter(function(items){return items.materials.includes("wood");});
-    woodArray.forEach(function(items){answer4.innerHTML += "<p>" + items.title + " is made of wood." + "</p>";});
+    woodArray.forEach(function(items){answer4.innerHTML += "<p>" + items.title + " is made of wood." + "</p>" + "<br></br>";});
 
 
 //5.Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
 var answer5 = document.getElementById("answer5")
 
   var eightMats = items.filter(function(items){return items.materials.length >= 8;});
-    eightMats.forEach(function(items){answer5.innerHTML += "<p>" + items.title + " has " + items.materials.length + " materials: " +"</p>" + "<p>" + items.materials + "</p>";});
+    eightMats.forEach(function(items){answer5.innerHTML += "<p>" + items.title + " has " + items.materials.length + " materials: " +"</p>" + "<p>" + items.materials + "</p>" + "<br></br>";});
 
 
 //6.How many items were made by their sellers?
